@@ -51,13 +51,13 @@ The main component, a single PCB holding most components, can be ordered fully a
 - Adafruit 4227 1W 8 Ohm Speaker or similiar (30x20mm)
 - 3D printed case
 
-## ... comming soon:
+## ... coming soon:
 
 #### Features:
 - Altitude above groundlevel
 - Flightlevel warnings
 - FANET integration
-- Access logged flights through the buttons
+- browse flight history and statistics on device
 - UI improvements and more :)
 
 #### Instructions:
@@ -69,4 +69,9 @@ The main component, a single PCB holding most components, can be ordered fully a
 
 ##### assembly and initial configuration:
 
-##### usage:
+##### usage (v0.9.2):
+- press and hold the upper, power button for 3 seconds to turn the device on or off
+- use the side buttons to increase or decrease the volume level
+- press and hold the power and volume up button for 15 seconds to perform a hard reset if necessary
+- when turned off, press and hold the power button and volume up button for 5 seconds to enter flashing/bootsel mode.
+  - a mass storage device does now appear when plugged into a computer or phone, copy a firmware.uf2 file here to upgrade your device
