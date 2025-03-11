@@ -16,7 +16,8 @@ The main component, a single custom PCB holding most components, can be ordered 
 - Numerical Variometer on the display
 - Altitude
 - Groundspeed and Glideratio
-- Windspeed and Direction estimator
+- Compass with flight direction
+- Windspeed- and direction estimator
 - FAI CIVL approved IGC tracklog signing (G-record)
 - Flight and Landing detection, Flighttimer and Post-Flight Statistics
 <img width="252" alt="image" src="https://github.com/user-attachments/assets/1f4ca641-3fc2-4881-8fe6-9fa85e84d0f9" />
