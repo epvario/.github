@@ -1,10 +1,12 @@
 # [EPVario]  state of the art open-source E-Paper Variometer for Paragliding
 
 EPVario is a powerful open source variometer for paragliding, designed to be mounted on your risers.
-Core component is a RP2040 microcontroller, the flagship chip designed by Raspberry Pi in the UK, and a WeAct Studio, 2.9 Inch, Epaper module providing a future proof hardware platform with excellent readability even in direct sunlight.
+
+Core component is a RP2040 microcontroller, the flagship chip designed by Raspberry Pi in the UK, and a WeAct Studio, 2.9 Inch, Epaper module providing a future proof hardware platform with excellent readability, even in direct sunlight.
+
 Full access to the design files of the 3D printed case offer great options for other mounting systems on cockpits or shoudler straps for tandem pilots.
 
-The main component, a single custom PCB holding most components, can be ordered at PCB manufacturers easily through the provided design files.
+The main component, a single PCB holding most components, can be ordered fully assembled at PCB manufacturers easily through the provided KiCAD design files.
 
 ![image](https://github.com/user-attachments/assets/b1dfbc78-c23f-4806-93fc-69b596cbea38)
 
@@ -13,8 +15,9 @@ The main component, a single custom PCB holding most components, can be ordered 
 
 ### Software Features:
 - Firmware written in **RUST**, providing great memory safety, fast code execution and a broad compatibility and easy to ugprade
+  - just drag and drop a firmware file to the USB connected vario from your PC or mobile
 - Numerical Variometer on the display
-- Altitude
+- Altitude aMSL
 - Groundspeed and Glideratio
 - Compass with flight direction
 - Windspeed- and direction estimator
@@ -41,29 +44,29 @@ The main component, a single custom PCB holding most components, can be ordered 
 - 3D printed case with multiple attachment options
 
 ### Part list:
-- epVario Custom PCB
+- epVario PCB
 - WeAct Studio 2.9" EPaper Module
 - Walksnail WS-M181 GPS + compass
 - EEMB LP603449 1100mAh lipo battery (51x35x6.3mm)
 - Adafruit 4227 1W 8 Ohm Speaker or similiar (30x20mm)
 - 3D printed case
 
+## ... comming soon:
 
-### Instructions:
-####  build the code:
-...
-coming soon
+#### Features:
+- Altitude above groundlevel
+- Flightlevel warnings
+- FANET integration
+- Access logged flights through the buttons
+- UI improvements and more :)
 
-#### order the custom PCB:
-...
-coming soon
+#### Instructions:
+##### build the code:
 
-#### print the case:
-...
-coming soon
+##### get the parts:
 
-#### assembly and initial configuration:
+##### print the case:
 
-#### usage:
-...
-coming soon
+##### assembly and initial configuration:
+
+##### usage:
