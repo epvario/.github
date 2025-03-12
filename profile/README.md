@@ -89,7 +89,8 @@ The main component, a single PCB holding most components, can be ordered fully a
 
 #### ... coming soon:
 - Altitude above groundlevel
+- variometer histogram
 - Flightlevel warnings
-- FANET integration
 - browse flight history and statistics on device
+- FANET integration
 - UI improvements and more :)
