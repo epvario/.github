@@ -67,11 +67,35 @@ The main component, a single PCB holding most components, can be ordered fully a
 
 ##### print the case:
 
-##### assembly and initial configuration:
+##### assembly:
+
+##### initial configuration (v0.9.2):
+- the current filesystem crate supports only FAT32 without MBR!
+- start the device in flash/bootsel mode press and hold the power button and volume up button for 5 seconds
+- connect the device to a PC or mobile phone
+- copy a firmare.uf2 file to mounted mass storage device
+- after upload the vario will automatically reboot and can be disconnected
 
 ##### usage (v0.9.2):
-- press and hold the upper, power button for 3 seconds to turn the device on or off
-- use the side buttons to increase or decrease the volume level
+- Press and hold the upper, power button for 3 seconds to turn the device on or off
+- Use the side buttons to increase or decrease the volume level
+- **Takeoff:** detection will now determine your location and altitude via GPS
+  - the SAT count on the top left will increase & the Flighttimer will show "locating"
+  -  Flighttimer will show "--:--:--" once location is complete
+  - At this stage the vario will buffer a tracklog until takeoff is detected
+    - A groundspeed of >2m/s for a duration of 5 seconds will start the flighttimer (preserving the time&data before)
+- **Flying:**
+  - The compass element will start working once a heading is obtained
+  - The wind estimator will deliver data (and continue updating) once a full cycle has been flown
+    - The gathered data will outage after 10min, so the information might disappear when flying into a single direction for longer time
+  - After 10min of runtime, the screen will be flushed (once drawn black and white) to reduce ghosting on the e-Paper screen.
+- **Landing** will be detected if groundspeed is less than <2m/s for 15 seconds
+  - The vario will now finish the IGC logging and display your flight statistics for 2 minutes
+  - if a shutdown will be initiated while stats are shown, they will be preserved on the screen after turning off
+- After 2 minutes are elapsed, the vario will continue in takeoff-detection mode
+  - if a shutdown will be initiated in this state, the screen will be cleared    
+
+##### Troubleshooting & Updating: 
 - press and hold the power and volume up button for 15 seconds to perform a hard reset if necessary
 - when turned off, press and hold the power button and volume up button for 5 seconds to enter flashing/bootsel mode.
   - a mass storage device does now appear when plugged into a computer or phone, copy a firmware.uf2 file here to upgrade your device
