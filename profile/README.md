@@ -1,4 +1,7 @@
-# [EPVario] <br> state of the art open-source E-Paper Variometer for Paragliding
+# State of the art open-source e-Paper Variometer for Paragliding
+
+<img align="right" height="200" alt="403388137-8c4eb38d-10e6-4f49-a6d1-fa12b550919c" src="https://github.com/user-attachments/assets/311c134d-0fa0-4c66-8a85-0490252111ef" />
+
 
 EPVario is a powerful open source variometer for paragliding, designed to be mounted on your risers.
 
