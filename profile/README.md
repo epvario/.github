@@ -51,32 +51,19 @@ The main component, a single PCB holding most components, can be ordered fully a
 - Adafruit 4227 1W 8 Ohm Speaker or similiar (30x20mm)
 - 3D printed case
 
-## ... coming soon:
-
-#### Features:
-- Altitude above groundlevel
-- Flightlevel warnings
-- FANET integration
-- browse flight history and statistics on device
-- UI improvements and more :)
-
-#### Instructions:
-##### build the code:
-
-##### get the parts:
-
-##### print the case:
-
-##### assembly:
-
-##### initial configuration (v0.9.2):
+### Instructions:
+#### build the code:
+#### get the parts:
+#### print the case:
+#### assembly:
+#### initial setup (v0.9.2):
 - the current filesystem crate supports only FAT32 without MBR!
 - start the device in flash/bootsel mode press and hold the power button and volume up button for 5 seconds
 - connect the device to a PC or mobile phone
 - copy a firmare.uf2 file to mounted mass storage device
 - after upload the vario will automatically reboot and can be disconnected
 
-##### usage (v0.9.2):
+#### usage (v0.9.2):
 - Press and hold the upper, power button for 3 seconds to turn the device on or off
 - Use the side buttons to increase or decrease the volume level
 - **Takeoff:** detection will now determine your location and altitude via GPS
@@ -95,7 +82,14 @@ The main component, a single PCB holding most components, can be ordered fully a
 - After 2 minutes are elapsed, the vario will continue in takeoff-detection mode
   - if a shutdown will be initiated in this state, the screen will be cleared    
 
-##### Troubleshooting & Updating: 
+#### Troubleshooting & Updating: 
 - press and hold the power and volume up button for 15 seconds to perform a hard reset if necessary
 - when turned off, press and hold the power button and volume up button for 5 seconds to enter flashing/bootsel mode.
   - a mass storage device does now appear when plugged into a computer or phone, copy a firmware.uf2 file here to upgrade your device
+
+#### ... coming soon:
+- Altitude above groundlevel
+- Flightlevel warnings
+- FANET integration
+- browse flight history and statistics on device
+- UI improvements and more :)
