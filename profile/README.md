@@ -1,4 +1,4 @@
-# [EPVario]  state of the art open-source E-Paper Variometer for Paragliding
+# [EPVario] <br> state of the art open-source E-Paper Variometer for Paragliding
 
 EPVario is a powerful open source variometer for paragliding, designed to be mounted on your risers.
 
@@ -23,7 +23,7 @@ The main component, a single PCB holding most components, can be ordered fully a
 - Windspeed- and direction estimator
 - FAI CIVL approved IGC tracklog signing (G-record)
 - Flight and Landing detection, Flighttimer and Post-Flight Statistics
-<img width="252" alt="image" src="https://github.com/user-attachments/assets/1f4ca641-3fc2-4881-8fe6-9fa85e84d0f9" />
+<img width="250" alt="image" src="https://github.com/user-attachments/assets/1f4ca641-3fc2-4881-8fe6-9fa85e84d0f9" />
 
 ### Hardware Features:
 - **RP2040**, dual-core Arm Cortex-M0+ processor
@@ -42,6 +42,7 @@ The main component, a single PCB holding most components, can be ordered fully a
 - user interface with 3 buttons 
 - compact size and low weight
 - 3D printed case with multiple attachment options
+<img width="250" alt="image" src="https://github.com/user-attachments/assets/7cce3a8f-e439-465d-8b93-4244affa9d08" />
 
 ### Part list:
 - epVario PCB
@@ -52,18 +53,18 @@ The main component, a single PCB holding most components, can be ordered fully a
 - 3D printed case
 
 ### Instructions:
-#### build the code:
-#### get the parts:
-#### print the case:
-#### assembly:
-#### initial setup (v0.9.2):
+#### Build the code:
+#### Get the parts:
+#### Print the case:
+#### Assembly:
+#### Initial setup (v0.9.2):
 - the current filesystem crate supports only FAT32 without MBR!
 - start the device in flash/bootsel mode press and hold the power button and volume up button for 5 seconds
 - connect the device to a PC or mobile phone
 - copy a firmare.uf2 file to mounted mass storage device
 - after upload the vario will automatically reboot and can be disconnected
 
-#### usage (v0.9.2):
+#### Usage (v0.9.2):
 - Press and hold the upper, power button for 3 seconds to turn the device on or off
 - Use the side buttons to increase or decrease the volume level
 - **Takeoff:** detection will now determine your location and altitude via GPS
