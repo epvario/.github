@@ -53,6 +53,7 @@ The main component, a single PCB holding most components, can be ordered fully a
 - Walksnail WS-M181 GPS + compass
 - EEMB LP603449 1100mAh lipo battery (51x35x6.3mm)
 - Adafruit 4227 1W 8 Ohm Speaker or similiar (30x20mm)
+- microSD card, not larger than 32GB
 - 3D printed case
 
 ### Instructions:
@@ -61,7 +62,11 @@ The main component, a single PCB holding most components, can be ordered fully a
 #### Print the case:
 #### Assembly:
 #### Initial setup (v0.9.2):
-- the current filesystem crate supports only FAT32 without MBR!
+- Format the SD card as blockdevice without partition table with FAT32
+  - on OSX:
+    - unmount the device: `diskutil unmountdisk /dev/disk4`
+    - destroy the partition table: `sudo dd if=/dev/zero of=/dev/disk4 bs=512 count=1`
+    - format the hole device: `sudo newfs_msdos -F 32 /dev/disk4`
 - start the device in flash/bootsel mode press and hold the power button and volume up button for 5 seconds
 - connect the device to a PC or mobile phone
 - copy a firmare.uf2 file to mounted mass storage device
