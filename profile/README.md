@@ -91,8 +91,10 @@ The main component, a single PCB holding most components, can be ordered fully a
   - if a shutdown will be initiated in this state, the screen will be cleared    
 
 #### Troubleshooting & Updating: 
-- press and hold the power and volume up button for 15 seconds to perform a hard reset if necessary
-- when turned off, press and hold the power button and volume up button for 5 seconds to enter flashing/bootsel mode.
+- hard reset:
+  - press and hold the power and volume up button for 15 seconds to perform a hard reset if necessary
+- firmware upgrade:
+  - when turned off, press and hold the power button and volume up button for 5 seconds to enter flashing/bootsel mode.
   - a mass storage device does now appear when plugged into a computer or phone, copy a firmware.uf2 file here to upgrade your device
 
 #### ... coming soon:
