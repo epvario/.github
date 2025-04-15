@@ -65,7 +65,7 @@ The main component, a single PCB holding most components, can be ordered fully a
 #### Assembly:
 #### Initial setup (v0.1.0):
 - Format the SD card with FAT32
-- optional: place a textfile named "config.txt" with a JSON content like so: {"pilot_name": "your name", "glider_type":"myWing"}
+- optional: place a textfile named "config.txt" with a JSON content like so: ```{"pilot_name": "your name", "glider_type":"myWing"}```
   - _more options parameters to come_
 - start the device in flash/bootsel mode by pressing and hold the volume up and power button for 5 seconds
 - connect the device to a PC or mobile phone
