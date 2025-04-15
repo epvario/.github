@@ -46,7 +46,7 @@ The main component, a single PCB holding most components, can be ordered fully a
 - compact size and low weight
 - 3D printed case with multiple attachment options
 - 80-85g
-- up to 20h runtime on a single charge
+- more than 15h runtime
 <img width="250" alt="image" src="https://github.com/user-attachments/assets/7cce3a8f-e439-465d-8b93-4244affa9d08" />
 
 ### Part list:
@@ -55,7 +55,7 @@ The main component, a single PCB holding most components, can be ordered fully a
 - Walksnail WS-M181 GPS + compass
 - EEMB LP603449 1100mAh lipo battery (51x35x6.3mm)
 - Adafruit 4227 1W 8 Ohm Speaker or similiar (30x20mm)
-- microSD card, not larger than 32GB
+- microSD card, not larger than 32GB (preferably SanDisk)
 - 3D printed case
 
 ### Instructions:
@@ -63,18 +63,16 @@ The main component, a single PCB holding most components, can be ordered fully a
 #### Get the parts:
 #### Print the case:
 #### Assembly:
-#### Initial setup (v0.9.2):
-- Format the SD card as blockdevice without partition table with FAT32
-  - on OSX:
-    - unmount the device: `diskutil unmountdisk /dev/disk4`
-    - destroy the partition table: `sudo dd if=/dev/zero of=/dev/disk4 bs=512 count=1`
-    - format the hole device: `sudo newfs_msdos -F 32 /dev/disk4`
-- start the device in flash/bootsel mode press and hold the power button and volume up button for 5 seconds
+#### Initial setup (v0.1.0):
+- Format the SD card with FAT32
+- optional: place a textfile named "config.txt" with a JSON content like so: {"pilot_name": "your name", "glider_type":"myWing"}
+  - _more options parameters to come_
+- start the device in flash/bootsel mode by pressing and hold the volume up and power button for 5 seconds
 - connect the device to a PC or mobile phone
-- copy a firmare.uf2 file to mounted mass storage device
-- after upload the vario will automatically reboot and can be disconnected
+- drag and drop the firmare.uf2 file to the mounted mass storage device named "RPI-RP2"
+- once uploaded, the vario will automatically reboot and can be disconnected
 
-#### Usage (v0.9.2):
+#### Usage (v0.1.0):
 - Press and hold the upper, power button for 3 seconds to turn the device on or off
 - Use the side buttons to increase or decrease the volume level
 - **Takeoff:** detection will now determine your location and altitude via GPS
@@ -86,11 +84,10 @@ The main component, a single PCB holding most components, can be ordered fully a
   - The compass element will start working once a heading is obtained
   - The wind estimator will deliver data (and continue updating) once a full cycle has been flown
     - The gathered data will outage after 10min, so the information might disappear when flying into a single direction for longer time
-  - After 10min of runtime, the screen will be flushed (once drawn black and white) to reduce ghosting on the e-Paper screen.
+  - After each 10min, the screen will be flushed (once drawn black and white) and draw a clear display on the e-Paper screen.
 - **Landing** will be detected if groundspeed is less than <2m/s for 15 seconds
-  - The vario will now finish the IGC logging and display your flight statistics for 2 minutes
-  - if a shutdown will be initiated while stats are shown, they will be preserved on the screen after turning off
-- After 2 minutes are elapsed, the vario will continue in takeoff-detection mode
+  - The vario will now finish the IGC logging and display your flight statistics for 30 seconds
+- After 30 seconds are elapsed, the vario will continue in takeoff-detection mode
   - if a shutdown will be initiated in this state, the screen will be cleared    
 
 #### Troubleshooting & Updating: 
