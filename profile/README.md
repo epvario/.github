@@ -63,16 +63,17 @@ The main component, a single PCB holding most components, can be ordered fully a
 #### Get the parts:
 #### Print the case:
 #### Assembly:
-#### Initial setup (v0.1.0):
+#### Initial setup (v0.1.2):
 - Format the SD card with FAT32
 - optional: place a textfile named "config.txt" with a JSON content like so: ```{"pilot_name": "your name", "glider_type":"myWing"}```
+  - ```utc_time_offset: +0200``` to adjust the clock to your local time
   - _more options parameters to come_
 - start the device in flash/bootsel mode by pressing and hold the volume up and power button for 5 seconds
 - connect the device to a PC or mobile phone
 - drag and drop the firmare.uf2 file to the mounted mass storage device named "RPI-RP2"
 - once uploaded, the vario will automatically reboot and can be disconnected
 
-#### Usage (v0.1.0):
+#### Usage (v0.1.2):
 - Press and hold the upper, power button for 3 seconds to turn the device on or off
 - Use the side buttons to increase or decrease the volume level
 - **Takeoff:** detection will now determine your location and altitude via GPS
@@ -86,9 +87,7 @@ The main component, a single PCB holding most components, can be ordered fully a
     - The gathered data will outage after 10min, so the information might disappear when flying into a single direction for longer time
   - After each 10min, the screen will be flushed (once drawn black and white) and draw a clear display on the e-Paper screen.
 - **Landing** will be detected if groundspeed is less than <2m/s for 15 seconds
-  - The vario will now finish the IGC logging and display your flight statistics for 30 seconds
-- After 30 seconds are elapsed, the vario will continue in takeoff-detection mode
-  - if a shutdown will be initiated in this state, the screen will be cleared    
+  - The vario will now finish the IGC logging and display your flight statistics until any of the volume buttons is pressed
 
 #### Troubleshooting & Updating: 
 - hard reset:
@@ -100,7 +99,7 @@ The main component, a single PCB holding most components, can be ordered fully a
 #### ... coming soon:
 - Altitude above groundlevel
 - variometer histogram
-- Flightlevel warnings
 - browse flight history and statistics on device
+- Flightlevel warnings
 - FANET integration
 - UI improvements and more :)
