@@ -96,6 +96,20 @@ The main component, a single PCB holding most components, can be ordered fully a
   - when turned off, press and hold the power button and volume up button for 5 seconds to enter flashing/bootsel mode.
   - a mass storage device does now appear when plugged into a computer or phone, copy a firmware.uf2 file here to upgrade your device
 
+#### Release Notes:
+- v0.1.2
+  - new: button tones
+  - new: takeoff and landing tones
+  - new: offset for UTC clock, default +0200, config: utc_time_offset
+  - new: max g_force on stats screen
+  - new: show post flight stats until a button is pressed or shutdown is initiated
+  - fix: initial ghosting after power on
+- v0.1.1
+  - new: improve IGC B-record
+  - fix: formatting of windspeed estimator causing device freeze
+- v0.1.0 
+  - initial release
+
 #### ... coming soon:
 - Altitude above groundlevel
 - variometer histogram
