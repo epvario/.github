@@ -11,6 +11,8 @@ Full access to the design files of the 3D printed case offer great options for o
 
 The main component, a single PCB holding most components, can be ordered fully assembled at PCB manufacturers easily through the provided KiCAD design files.
 
+Join us on telegram here: https://t.me/+4pXlLXE_beo4ZTI0
+
 ![image](https://github.com/user-attachments/assets/b1dfbc78-c23f-4806-93fc-69b596cbea38)
 
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/4dd2d3aa-1ad8-4e8d-8e13-0699db8e57dd" />
@@ -26,7 +28,7 @@ The main component, a single PCB holding most components, can be ordered fully a
 - Windspeed- and direction estimator
 - FAI CIVL approved IGC tracklog signing (G-record)
 - Flight and Landing detection, Flighttimer and Post-Flight Statistics
-<img width="250" alt="image" src="https://github.com/user-attachments/assets/1f4ca641-3fc2-4881-8fe6-9fa85e84d0f9" />
+<img width="250" alt="image" src="https://github.com/user-attachments/assets/be6a5a36-a03f-4e30-9590-4b452bdb9be1" />
 
 ### Hardware Features:
 - **RP2040**, dual-core Arm Cortex-M0+ processor
@@ -112,7 +114,7 @@ The main component, a single PCB holding most components, can be ordered fully a
 
 #### ... coming soon:
 - Altitude above groundlevel
-- variometer histogram
+- variometer graph
 - browse flight history and statistics on device
 - Flightlevel warnings
 - FANET integration
