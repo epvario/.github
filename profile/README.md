@@ -65,9 +65,16 @@ Join us on telegram here: https://t.me/+4pXlLXE_beo4ZTI0
 #### Get the parts:
 #### Print the case:
 #### Assembly:
-#### Initial setup (v0.1.2):
+#### Initial setup (v0.1.3):
 - Format the SD card with FAT32
-- optional: place a textfile named "config.txt" with a JSON content like: ```{"pilot_name": "your name", "glider_type":"myWing", "utc_time_offset": "+0200"}```
+- optional: place a textfile named "config.txt" with a JSON content like:  
+  - ```
+    {"pilot_name": "your name",
+    "glider_type":"myWing",
+    "utc_time_offset": "+0200",
+    "startup_volume": "Medium",
+    "display_version: 1}
+    ```
   - _more options parameters to come_
   - **always supply all parameters!**
 - start the device in flash/bootsel mode by pressing and hold the volume up and power button for 5 seconds
@@ -99,6 +106,8 @@ Join us on telegram here: https://t.me/+4pXlLXE_beo4ZTI0
   - a mass storage device does now appear when plugged into a computer or phone, copy a firmware.uf2 file here to upgrade your device
 
 #### Release Notes:
+- v0.1.3
+  - new: ... 
 - v0.1.2
   - new: button tones
   - new: takeoff and landing tones
