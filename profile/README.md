@@ -73,7 +73,7 @@ Join us on telegram here: https://t.me/+4pXlLXE_beo4ZTI0
     "glider_type":"myWing",
     "utc_time_offset": "+0200",
     "startup_volume": "Medium",
-    "display_version: 1}
+    "display_version": 1}
     ```
   - _more options parameters to come_
   - **always supply all parameters!**
