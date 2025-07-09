@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EPVario Config Builder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+    }
+    label, select, input {
+      display: block;
+      margin: 10px 0;
+      width: 100%;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>EPVario Config Builder v0.1.3</h2>
+
+  <label>Pilot Name:
+    <input type="text" id="pilot_name" />
+  </label>
+
+  <label>Glider Type:
+    <input type="text" id="glider_type" />
+  </label>
+
+  <label>Startup Volume:
+    <select id="startup_volume">
+      <option>Mute</option>
+      <option>Low</option>
+      <option selected>Medium</option>
+      <option>High</option>
+      <option>Full</option>
+    </select>
+  </label>
+
+  <label>UTC Time Offset:
+    <select id="utc_time_offset">
+      <option>-0200</option>
+      <option>-0100</option>
+      <option>0000</option>
+      <option>+0100</option>
+      <option selected>+0200</option>
+    </select>
+  </label>
+
+  <label>Display Version (1 to 3):
+    <input type="number" id="display_version" min="1" max="3" />
+  </label>
+
+  <button onclick="generateConfig()">Download Config</button>
+
+  <script>
+    function generateConfig() {
+      const config = {
+        pilot_name: document.getElementById('pilot_name').value,
+        glider_type: document.getElementById('glider_type').value,
+        startup_volume: document.getElementById('startup_volume').value,
+        utc_timeoffset: document.getElementById('utc_time_offset').value
+      };
+
+      const displayVersion = document.getElementById('display_version').value;
+      if (displayVersion && parseInt(displayVersion) >= 1 && parseInt(displayVersion) <= 3) {
+        config.display_version = parseInt(displayVersion);
+      }
+
+      const jsonString = JSON.stringify(config, null, 2);
+      const blob = new Blob([jsonString], { type: 'text/plain' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'config.txt';
+      link.click();
+    }
+  </script>
+
+</body>
+</html>
+
