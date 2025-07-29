@@ -106,13 +106,13 @@ Join us on telegram here: https://t.me/+4pXlLXE_beo4ZTI0
   - a mass storage device does now appear when plugged into a computer or phone, copy a firmware.uf2 file here to upgrade your device
 
 #### Release Notes:
-- v0.1.4(Alpha)
+- v0.1.3(RC4)
   - change: new display layout
   - change: removed decimal on horizontal speed
   - new: adding SRTM elevation data to calculate AGL display  
   - fix: improve wind estimator by using vel_north, vel_east, vector magnitude and atan2()
   - fix: limit IGC handler to write BRecords once per second 
-- v0.1.3(RC)
+- v0.1.3(RC3)
   - new: (barometer) temperature on right bottom (1bb9a8b)
   - new: startup_volume can be defined in config file "startup_volume": "Mute|Low|Medium|High|Full"
   - new: display driver can select display specific LUTs via config file ("display_version": 1-3)
