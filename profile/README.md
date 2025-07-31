@@ -82,14 +82,17 @@ Join us on telegram here: https://t.me/+4pXlLXE_beo4ZTI0
 - drag and drop the firmare.uf2 file to the mounted mass storage device named "RPI-RP2"
 - once uploaded, the vario will automatically reboot and can be disconnected
 
-#### Usage (v0.1.2):
-- Press and hold the upper, power button for 3 seconds to turn the device on or off
-- Use the side buttons to increase or decrease the volume level
-- **Takeoff:** detection will now determine your location and altitude via GPS
-  - the SAT count on the top left will increase & the Flighttimer will show "locating"
-  -  Flighttimer will show "--:--:--" once location is complete
+#### Usage (v0.1.3+):
+- **Pre-Takeoff:**
+  - Press and hold the upper, power button for 3 seconds to turn the device on or off
+  - Use the side buttons to increase or decrease the volume level
+  - The Vario will now find your location, the SAT count on the top left will increase & the Flighttimer will show "locating"
+  - Once your position is set, the Flighttimer will show "--:--:--"
   - At this stage the vario is in pre-takeoff mode, recoding the past 20 seconds to include your takeoff in the log
-    - A groundspeed of **>2m/s** for a duration of **5 seconds** will put the vario into flight mode and continous record your position. The flighttimer will start running and a 4-tone-climb sound will be noticable. 
+- **Takeoff:** 
+  - Once groundspeed is above **>2m/s** for a duration of **5 seconds** the vario will detect your takeoff.
+  - The flighttimer will start running and a 4-tone-climb sound will be noticable.
+  - Your position will be recorded continously 
 - **Flying:**
   - The compass element will start working once a heading is obtained
   - The wind estimator will deliver data (and continue updating) every full cycle has been flown
@@ -108,9 +111,9 @@ Join us on telegram here: https://t.me/+4pXlLXE_beo4ZTI0
 
 #### Release Notes:
 - v0.1.3(RC4)
+  - new: adding SRTM elevation data to calculate and display AGL altitude
   - change: new display layout
   - change: removed decimal on horizontal speed
-  - new: adding SRTM elevation data to calculate AGL display  
   - fix: improve wind estimator by using vel_north, vel_east, vector magnitude and atan2()
   - fix: limit IGC handler to write BRecords once per second 
 - v0.1.3(RC3)
