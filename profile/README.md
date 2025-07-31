@@ -23,6 +23,7 @@ Join us on telegram here: https://t.me/+4pXlLXE_beo4ZTI0
   - just drag and drop a firmware file to the USB connected vario from your PC or mobile
 - Numerical Variometer on the display
 - Altitude aMSL
+- Altitude above Ground (using SRTM elevation data)
 - Groundspeed and Glideratio
 - Compass with flight direction
 - Windspeed- and direction estimator
@@ -67,7 +68,7 @@ Join us on telegram here: https://t.me/+4pXlLXE_beo4ZTI0
 #### Assembly:
 #### Initial setup (v0.1.3):
 - Format the SD card with FAT32
-- optional: place a textfile named "config.txt" with a JSON content like:  
+- optional: place a textfile named "**config.txt**" with a JSON content like:  
   - ```
     {"pilot_name": "your name",
     "glider_type":"myWing",
@@ -76,8 +77,7 @@ Join us on telegram here: https://t.me/+4pXlLXE_beo4ZTI0
     "display_version": 1}
     ```
   - _more options parameters to come_
-  - **always supply all parameters!**
-- start the device in flash/bootsel mode by pressing and hold the volume up and power button for 5 seconds
+- start the device in flash/bootsel mode by pressing and **hold** the **volume up** and **power button** for 5 seconds
 - connect the device to a PC or mobile phone
 - drag and drop the firmare.uf2 file to the mounted mass storage device named "RPI-RP2"
 - once uploaded, the vario will automatically reboot and can be disconnected
@@ -88,15 +88,16 @@ Join us on telegram here: https://t.me/+4pXlLXE_beo4ZTI0
 - **Takeoff:** detection will now determine your location and altitude via GPS
   - the SAT count on the top left will increase & the Flighttimer will show "locating"
   -  Flighttimer will show "--:--:--" once location is complete
-  - At this stage the vario will buffer a tracklog until takeoff is detected
-    - A groundspeed of >2m/s for a duration of 5 seconds will start the flighttimer (preserving the time&data before)
+  - At this stage the vario is in pre-takeoff mode, recoding the past 20 seconds to include your takeoff in the log
+    - A groundspeed of **>2m/s** for a duration of **5 seconds** will put the vario into flight mode and continous record your position. The flighttimer will start running and a 4-tone-climb sound will be noticable. 
 - **Flying:**
   - The compass element will start working once a heading is obtained
-  - The wind estimator will deliver data (and continue updating) once a full cycle has been flown
+  - The wind estimator will deliver data (and continue updating) every full cycle has been flown
     - The gathered data will outage after 10min, so the information might disappear when flying into a single direction for longer time
-  - After each 10min, the screen will be flushed (once drawn black and white) and draw a clear display on the e-Paper screen.
-- **Landing** will be detected if groundspeed is less than <2m/s for 15 seconds
-  - The vario will now finish the IGC logging and display your flight statistics until any of the volume buttons is pressed
+  - After each 10min, the screen will be flushed (once drawn black and white) to clear the display from ghosting - which is a common behavior of e-Paper screens. 
+- **Landing** will be detected if groundspeed is less than <2m/s for 60 seconds. 
+  - **optional:** you can force the vario to stop recording by press and hold both volume buttons for 1 second. 
+  - The vario will now finish the IGC logging and display your flight statistics until any of the volume buttons is pressed for 1 second or a new takeoff has been detected. 
 
 #### Troubleshooting & Updating: 
 - hard reset:
@@ -133,8 +134,6 @@ Join us on telegram here: https://t.me/+4pXlLXE_beo4ZTI0
   - initial release
 
 #### ... coming soon:
-- Altitude above groundlevel
-- variometer graph
 - browse flight history and statistics on device
 - Flightlevel warnings
 - FANET integration
